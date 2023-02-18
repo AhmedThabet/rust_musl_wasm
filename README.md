@@ -1,6 +1,7 @@
 # Description
 
-rust_musl_wasm image should be used as a builder image for rust projects that need to build for wasm and musl targets.
+rust_musl_wasm image is used mainly a builder image for rust projects that need to build for wasm and musl targets.\
+[Git Repo](https://github.com/AhmedThabet/rust_musl_wasm) \
 It's built on top of rust:1 so, it's a debian based image with rust and the following targets installed:
 
 1. wasm32-unknown-unknown
