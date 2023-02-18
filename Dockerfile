@@ -10,7 +10,9 @@ RUN DEBIAN_FRONTEND=nointeractive apt -o Acquire::Check-Valid-Until=false update
     && apt clean -y
 
 RUN rustup update \
-    && rustup target add x86_64-unknown-linux-musl wasm32-unknown-unknown \
+    && rustup target add x86_64-unknown-linux-musl wasm32-unknown-unknown wasm32-wasi \
     && cargo install -f wasm-bindgen-cli wasm-pack wasm-opt trunk mdbook cargo-cache && cargo cache -a
+
+RUN curl https://wasmtime.dev/install.sh -sSf | bash
 
 ENTRYPOINT ["bash"]

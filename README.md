@@ -7,14 +7,16 @@ It's built on top of rust:1 so, it's a debian based image with rust and the foll
 1. wasm32-unknown-unknown
 2. x86_64-unknown-linux-gnu
 3. x86_64-unknown-linux-musl
+4. wasm32-wasi
 
 The image has tools to build musl and wasm targets:
 
 1. wasm-bindgen
 2. wasm-pack
 3. wasm-opt
-4. trunk
-5. mdbook (documenting tool)
+4. wasmtime
+5. trunk
+6. mdbook (documenting tool)
 
 ## Usage
 
